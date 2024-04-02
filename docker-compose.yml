@@ -1,0 +1,17 @@
+version: "3.6"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./.docker/dev/Dockerfile
+      args:
+        - NPM_AUTH_TOKEN=${NPM_AUTH_TOKEN}
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - ".:/application-dollar-frontend"
+    ports:
+      - 3000:3000
+    command: >
+      bash -c "cp -rfu /cache/node_modules/. /application-dollar-frontend/node_modules/  
+      && npm start"
