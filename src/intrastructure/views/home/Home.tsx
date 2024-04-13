@@ -26,7 +26,7 @@ export const Home: React.FC<HomeProps> = ({ useCases }) => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [useCases.showMenuUseCase]);
 
   const renderDollars = (values: DollarModel[]) => {
     const tags: React.ReactNode[] = [];
