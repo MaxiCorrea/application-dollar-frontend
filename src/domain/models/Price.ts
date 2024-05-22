@@ -13,4 +13,7 @@ export class Price {
     return this.value;
   };
 
+  public isValid = (): boolean => {
+    return this.value !== undefined && this.value !== null;
+  };
 }
