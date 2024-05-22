@@ -55,7 +55,7 @@ export const Home: React.FC<HomeProps> = ({ useCases }) => {
         }}
       >
         {loading && <MxSpinner />}
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent:"center" }}>
           {renderDollars(dollars)}
         </div>
       </main>

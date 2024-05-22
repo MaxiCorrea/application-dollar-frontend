@@ -7,17 +7,20 @@ interface IPriceProps {
 }
 
 export const Price: React.VFC<IPriceProps> = ({ price, title }) => {
+  if(price.value === null) return null;
   return (
     <div
       style={{
         display: "flex",
         margin: "10px",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "baseline",
+        fontFamily: "Gotham",
+        fontSize: "13px"
       }}
     >
       <h4>{title}</h4>
-      <div style={{minWidth : "10px"}}/>
+      <div style={{ minWidth: "10px" }} />
       <p>{`$ ${price.value}`}</p>
     </div>
   );
