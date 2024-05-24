@@ -5,7 +5,7 @@ WORKDIR /cache
 ARG NPM_AUTH_TOKEN
 ENV NPM_AUTH_TOKEN="${NPM_AUTH_TOKEN}"
 COPY package.json .
-COPY package-lock.json .
+#COPY package-lock.json .
 COPY .npmrc .
 RUN npm install
 RUN rm -f .npmrc

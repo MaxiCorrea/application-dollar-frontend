@@ -1,32 +1,32 @@
-import { IPrice } from "./Price";
+import { Price } from "./Price";
 
 export interface IDollar {
   readonly name: string;
-  readonly valuePurchase: IPrice;
-  readonly valueSale: IPrice;
+  readonly valuePurchase: Price;
+  readonly valueSale: Price;
 }
 
 export class Dollar {
     
   private name: string;
-  private valuePurchase: IPrice;
-  private valueSale: IPrice;
+  private valuePurchase: Price;
+  private valueSale: Price;
 
   constructor(args: IDollar) {
     this.name = args.name;
-    this.valuePurchase = args.valuePurchase;
-    this.valueSale = args.valueSale;
+    this.valuePurchase = Price.create(args.valuePurchase);
+    this.valueSale = Price.create(args.valueSale);
   }
 
   public getName = (): string => {
     return this.name;
   };
 
-  public getValuePurchase = (): IPrice => {
+  public getValuePurchase = (): Price => {
     return this.valuePurchase;
   };
 
-  public getValueSale = (): IPrice => {
+  public getValueSale = (): Price => {
     return this.valueSale;
   };
 }
