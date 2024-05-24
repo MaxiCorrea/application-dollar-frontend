@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/application-dollar-frontend/static/js/main.b62696dc.js",
+    "main.js": "/application-dollar-frontend/static/js/main.6f794768.js",
     "index.html": "/application-dollar-frontend/index.html",
-    "main.b62696dc.js.map": "/application-dollar-frontend/static/js/main.b62696dc.js.map"
+    "main.6f794768.js.map": "/application-dollar-frontend/static/js/main.6f794768.js.map"
   },
   "entrypoints": [
-    "static/js/main.b62696dc.js"
+    "static/js/main.6f794768.js"
   ]
 }
