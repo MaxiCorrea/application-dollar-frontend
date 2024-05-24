@@ -3,6 +3,13 @@ export interface IPrice {
 }
 
 export class Price {
+
+  public static create = (other: Price): Price => {
+    return new Price({
+      value: other.value,
+    });
+  };
+
   private value: number;
 
   constructor(args: IPrice) {

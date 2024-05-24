@@ -1,13 +1,16 @@
 import * as React from "react";
-import { IPrice } from "../../../domain/models/Price";
+import { Price as ModelPrice } from "../../../domain/models/Price";
 
 interface IPriceProps {
   readonly title: string;
-  readonly price: IPrice;
+  readonly price: ModelPrice;
 }
 
 export const Price: React.VFC<IPriceProps> = ({ price, title }) => {
-  if(price.value === null) return null;
+
+
+  if(!price.isValid()) return null;
+
   return (
     <div
       style={{
@@ -21,7 +24,7 @@ export const Price: React.VFC<IPriceProps> = ({ price, title }) => {
     >
       <h4>{title}</h4>
       <div style={{ minWidth: "10px" }} />
-      <p>{`$ ${price.value}`}</p>
+      <p>{`$ ${price.getValue()}`}</p>
     </div>
   );
 };
